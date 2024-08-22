@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Tadex.css" />
+    <title>ramp Creation</title>
+    <script>
+      function handleRequestTypeChange() {
+        var requestType = document.getElementById("allRequestType").value;
+        var additionalDataBox = document.getElementById("additionalData");
+
+        // Redirect based on the selected type
+        switch (requestType) {
+          case "creation":
+            // Show additional data for creation
+            additionalDataBox.style.display = "block";
+            break;
+          default:
+            // Hide additional data if no valid option is selected
+            additionalDataBox.style.display = "none";
+        }
+      }
+
+      function redirectToPage(page) {
+        var requestType = document.getElementById("allRequestType").value;
+        if (requestType) {
+          window.location.href = page;
+        }
+      }
+
+      function resetForm() {
+        document.querySelector("form").reset(); // Reset the form
+        document.getElementById("additionalData").style.display = "none"; // Hide additional data section
+        // Ensure no redirection occurs if the form is reset
+      }
+
+      function submitForm() {
+        alert("Your request is submitted successfully.");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="bx-1">
+      <div class="head">
+        <p>Default Data</p>
+      </div>
+
+      <div class="form-bx">
+
+        <!-- First Field: Types of User Request -->
+        <div class="field">
+          <div class="form-head">
+            <p>Types of User Request: <span>*</span></p>
+          </div>
+          <div class="form-input">
+            <select id="allRequestType" onchange="handleRequestTypeChange();">
+              <!-- <option value="Select">Select</option> -->
+              <option value="creation">Creation</option>
+              <option value="modification">Modification</option>
+              <option value="deletion">Deletion</option>
+              <option value="active">Active</option>
+              <option value="deletion">Deactive</option>
+
+            </select>
+          </div>
+        </div>
+        <!-- ./First Field -->
+
+        <!-- Second Field: Request For -->
+        <div class="field">
+          <div class="form-head">
+            <p>Request For: <span>*</span></p>
+          </div>
+          <div class="form-input">
+            <div class="rd-bx">
+              <div class="rd-1">
+                <input type="radio" id="myself" name="requestFor" checked />
+                <label for="myself">Myself</label>
+              </div>
+              <div class="rd-2">
+                <input type="radio" id="onBehalf" name="requestFor" />
+                <label for="onBehalf">On behalf of</label>
+              </div>
+            </div>
+            <div class="emp-bx">
+              <input
+                type="text"
+                placeholder="Enter Employee Details..."
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+        <!-- ./Second Field -->
+
+        <!-- Third Field: Application -->
+        <div class="field">
+          <div class="form-head">
+            <p>Application: <span>*</span></p>
+          </div>
+          <div class="form-input">
+            <select>
+              <option value="Select">Select</option>
+              <option value="aspect">Tadex</option>
+              <!-- <option value="sfdc">SFDC</option>
+              <option value="Aadhar Vault">Aadhar Vault</option>
+              <option value="CRM Next">CRM Next</option> -->
+            </select>
+          </div>
+        </div>
+        <!-- ./Third Field -->
+
+        <!-- Fourth Field: Module Name -->
+        <div class="field">
+          <div class="form-head">
+            <p>Module Name: <span>*</span></p>
+          </div>
+          <div class="form-input">
+            <select>
+              <option value="select">Select</option>
+              <option value="aspect">Tadex</option>
+              <!-- <option value="aspect">Tadex Star</option> -->
+            </select>
+          </div>
+        </div>
+        <!-- ./Fourth Field -->
+
+        <!-- Fifth Field: Business Justification -->
+        <div class="field">
+          <div class="form-head">
+            <p>Business Justification: <span>*</span></p>
+          </div>
+          <div class="form-input">
+            <input
+              type="text"
+              placeholder="Enter Business Justification Here..."
+            />
+          </div>
+        </div>
+        <!-- ./Fifth Field -->
+      </div>
+    </div>
+
+    <!-- Additional Data Required For Aspect -->
+    <div class="bx-2" id="additionalData">
+      <div class="head">
+        <p>Additional Data Required For Tadex</p>
+      </div>
+
+      <div class="form-grp-bx">
+        <div class="form-bx-1">
+          <!-- First Field : User ID -->
+          <div class="form-field">
+            <div class="form-head">
+              <p>User ID: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <input type="text" placeholder="Enter User ID" />
+            </div>
+          </div>
+          <!-- ./First Field : User ID-->
+
+          <!-- Second Field : Role -->
+          <div class="form-field">
+            <div class="form-head">
+              <p>Role: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <select>
+                <option value="Select">Select</option>
+                <option value="complianceUser">Role 1</option>
+                <option value="audit">Role 2</option>
+                <option value="userL2">Role 3</option>
+              </select>
+            </div>
+          </div>
+          <!-- ./Second Field : Role -->
+
+<!-- Third Field : Branch -->
+          <div class="form-field">
+            <div class="form-head">
+              <p>Branch: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <select>
+                <option value="Select">Select</option>
+                <option value="complianceUser">Branch 1</option>
+                <option value="audit">Branch 2</option>
+              </select>
+            </div>
+          </div>
+          <!-- ./Third Field : Branch -->
+
+          <!-- Fourth Field : Email ID -->
+          <div class="field">
+            <div class="form-head">
+              <p>Approval Level 1: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <select>
+                <option value="Select">Select</option>
+                <option value="aspect">Approving Autority Level 1</option>
+                <!-- <option value="sfdc">SFDC</option>
+                <option value="Aadhar Vault">Aadhar Vault</option>
+                <option value="CRM Next">CRM Next</option> -->
+              </select>
+            </div>
+          </div>
+
+          <!-- ./Fourth Field : Email ID -->
+        </div>
+
+
+        <div class="form-bx-2">
+          <!-- Additional Field: Name -->
+          <div class="form-field">
+            <div class="form-head">
+              <p>Name <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <input
+                type="text"
+                placeholder="To be fetched from HRMS"
+                disabled
+              />
+            </div>
+          </div>
+
+
+          <div class="form-field">
+            <div class="form-head">
+              <p>Email Id: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <input
+                type="text"
+                placeholder="Email ID To be fetched from HRMS"
+                disabled
+              />
+            </div>
+          </div>
+
+
+            <!-- User Status -->
+            <div class="field">
+              <div class="form-head">
+                <p>Transaction Value: <span>*</span></p>
+              </div>
+              <div class="form-input">
+                <select>
+                  <option value="Select">Select</option>
+                  <option value="aspect">0 - 50000</option>
+                  <!-- <option value="sfdc">SFDC</option>
+                  <option value="Aadhar Vault">Aadhar Vault</option>
+                  <option value="CRM Next">CRM Next</option> -->
+                </select>
+              </div>
+            </div>
+
+          <!-- Approval Status -->
+          <div class="field">
+            <div class="form-head">
+              <p>Approval Level 2: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <select>
+                <option value="Select">Select</option>
+                <option value="aspect">Approving Autority Level 2</option>
+                <!-- <option value="sfdc">SFDC</option>
+                <option value="Aadhar Vault">Aadhar Vault</option>
+                <option value="CRM Next">CRM Next</option> -->
+              </select>
+            </div>
+          </div>
+          <!-- ./Approval Level 1 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons for Reset and Submit -->
+    <div class="btn-grp-bx">
+      <div class="btn btn-1">
+        <button type="button" onclick="resetForm()">Reset</button>
+      </div>
+      <div class="btn btn-2">
+        <button type="button" onclick="submitForm()">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>
