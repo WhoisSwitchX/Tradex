@@ -16,6 +16,14 @@
             // Show additional data for creation
             additionalDataBox.style.display = "block";
             break;
+          case "modification":
+            // Redirect to modification page
+            window.location.href = "TadexModification.html";
+            break;
+            case "active":
+            // Redirect to deletion page
+            window.location.href = "Active.html";
+            break;
           default:
             // Hide additional data if no valid option is selected
             additionalDataBox.style.display = "none";
@@ -59,7 +67,9 @@
               <option value="creation">Creation</option>
               <option value="modification">Modification</option>
               <option value="deletion">Deletion</option>
-              <option value="active">Active/Deactive</option>
+              <option value="deletion">Active/Deactive</option>
+
+
             </select>
           </div>
         </div>
@@ -100,7 +110,7 @@
           <div class="form-input">
             <select>
               <option value="Select">Select</option>
-              <option value="aspect">Tradex</option>
+              <option value="aspect">Tadex</option>
               <!-- <option value="sfdc">SFDC</option>
               <option value="Aadhar Vault">Aadhar Vault</option>
               <option value="CRM Next">CRM Next</option> -->
@@ -117,7 +127,7 @@
           <div class="form-input">
             <select>
               <option value="select">Select</option>
-              <option value="aspect">Tradex</option>
+              <option value="aspect">Tadex</option>
               <!-- <option value="aspect">Tadex Star</option> -->
             </select>
           </div>
@@ -143,7 +153,7 @@
     <!-- Additional Data Required For Aspect -->
     <div class="bx-2" id="additionalData">
       <div class="head">
-        <p>Additional Data Required For Tradex</p>
+        <p>Additional Data Required For Tadex</p>
       </div>
 
       <div class="form-grp-bx">
@@ -154,7 +164,7 @@
               <p>User ID: <span>*</span></p>
             </div>
             <div class="form-input">
-              <input type="text" placeholder="Autopopulated" disabled/>
+              <input type="text" placeholder="Enter User ID" />
             </div>
           </div>
           <!-- ./First Field : User ID-->
@@ -190,6 +200,10 @@
           </div>
           <!-- ./Third Field : Branch -->
 
+
+          
+
+
           <!-- Fourth Field : Email ID -->
           <div class="field">
             <div class="form-head">
@@ -206,6 +220,23 @@
             </div>
           </div>
 
+
+
+          <!-- <div class="field">
+            <div class="form-head">
+              <p>Approval Level 2: <span>*</span></p>
+            </div>
+            <div class="form-input">
+              <select>
+                <option value="Select">Select</option>
+                <option value="aspect">Approving Autority Level 2</option> -->
+                <!-- <option value="sfdc">SFDC</option>
+                <option value="Aadhar Vault">Aadhar Vault</option>
+                <option value="CRM Next">CRM Next</option> -->
+              <!-- </select>
+            </div>
+          </div> -->
+
           <!-- ./Fourth Field : Email ID -->
         </div>
 
@@ -219,7 +250,7 @@
             <div class="form-input">
               <input
                 type="text"
-                placeholder="Autopopulated"
+                placeholder="To be fetched from HRMS"
                 disabled
               />
             </div>
@@ -233,11 +264,15 @@
             <div class="form-input">
               <input
                 type="text"
-                placeholder="Autopopulated"
+                placeholder="Email ID To be fetched from HRMS"
                 disabled
               />
             </div>
           </div>
+
+
+          
+
 
 
             <!-- User Status -->
@@ -256,21 +291,26 @@
               </div>
             </div>
 
+
+            <div class="field">
+              <div class="form-head">
+                <p>User Type: <span>*</span></p>
+              </div>
+              <div class="form-input">
+                <div class="rd-bx">
+                  <div class="rd-1">
+                    <input type="radio" id="myself" name="requestFor" checked />
+                    <label for="myself">Active</label>
+                  </div>
+                 
+                </div>
+                <div class="emp-bx">
+                 
+                </div>
+              </div>
+            </div>
           <!-- Approval Status -->
-          <div class="field">
-            <div class="form-head">
-              <p>Approval Level 2: <span>*</span></p>
-            </div>
-            <div class="form-input">
-              <select>
-                <option value="Select">Select</option>
-                <option value="aspect">Approving Autority Level 2</option>
-                <!-- <option value="sfdc">SFDC</option>
-                <option value="Aadhar Vault">Aadhar Vault</option>
-                <option value="CRM Next">CRM Next</option> -->
-              </select>
-            </div>
-          </div>
+         
           <!-- ./Approval Level 1 -->
         </div>
       </div>
