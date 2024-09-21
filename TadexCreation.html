@@ -66,10 +66,6 @@
               <!-- <option value="Select">Select</option> -->
               <option value="creation">Creation</option>
               <option value="modification">Modification</option>
-              <option value="deletion">Deletion</option>
-              <option value="deletion">Active/Deactive</option>
-
-
             </select>
           </div>
         </div>
@@ -110,7 +106,7 @@
           <div class="form-input">
             <select>
               <option value="Select">Select</option>
-              <option value="aspect">Tadex</option>
+              <option value="aspect">Tradex</option>
               <!-- <option value="sfdc">SFDC</option>
               <option value="Aadhar Vault">Aadhar Vault</option>
               <option value="CRM Next">CRM Next</option> -->
@@ -127,7 +123,7 @@
           <div class="form-input">
             <select>
               <option value="select">Select</option>
-              <option value="aspect">Tadex</option>
+              <option value="aspect">Tradex</option>
               <!-- <option value="aspect">Tadex Star</option> -->
             </select>
           </div>
@@ -153,7 +149,7 @@
     <!-- Additional Data Required For Aspect -->
     <div class="bx-2" id="additionalData">
       <div class="head">
-        <p>Additional Data Required For Tadex</p>
+        <p>Additional Data Required For Tradex</p>
       </div>
 
       <div class="form-grp-bx">
@@ -270,45 +266,28 @@
             </div>
           </div>
 
-
-          
-
-
-
             <!-- User Status -->
-            <div class="field">
+            <div class="form-field">
               <div class="form-head">
-                <p>Transaction Value: <span>*</span></p>
+                <p>Transaction Value: <span></span></p>
               </div>
               <div class="form-input">
-                <select>
-                  <option value="Select">Select</option>
-                  <option value="aspect">0 - 50000</option>
-                  <!-- <option value="sfdc">SFDC</option>
-                  <option value="Aadhar Vault">Aadhar Vault</option>
-                  <option value="CRM Next">CRM Next</option> -->
-                </select>
+                <input type="number" value="0" min="0" max="999999999" step="100" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <div class="form-head">
+                <p>Approval Level 2: <span></span></p>
+              </div>
+              <div class="form-input">
+                <input
+                  type="text" placeholder="NOT APPLICABLE" disabled/>
               </div>
             </div>
 
 
-            <div class="field">
-              <div class="form-head">
-                <p>User Type: <span>*</span></p>
-              </div>
-              <div class="form-input">
-                <div class="rd-bx">
-                  <div class="rd-1">
-                    <input type="radio" id="myself" name="requestFor" checked />
-                    <label for="myself">Active</label>
-                  </div>
-                 
-                </div>
-                <div class="emp-bx">
-                 
-                </div>
-              </div>
-            </div>
+           
           <!-- Approval Status -->
          
           <!-- ./Approval Level 1 -->
